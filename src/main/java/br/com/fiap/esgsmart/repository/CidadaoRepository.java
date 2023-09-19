@@ -15,9 +15,4 @@ public interface CidadaoRepository extends JpaRepository<Cidadao, Integer> {
 
     List<Cidadao> findByEndereco(String endereco);
 
-    @Override
-    List<Cidadao> findAllById(Iterable<Integer> integers);
-
-    @Override
-    void deleteById(Integer integer);
 }
