@@ -9,7 +9,6 @@ public class Reciclagem {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "reciclagem")
     private Long id;
-
     private String tipoMaterial;
     private double quantidadeReciclada;
     private LocalDate dataReciclagem;
