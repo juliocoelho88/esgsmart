@@ -1,6 +1,7 @@
 package br.com.fiap.esgsmart.model;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
+
 
 @Entity
 @SequenceGenerator(name = "dispositivoIot", sequenceName = "SQ_DISPOSITIVOIOT", allocationSize = 1)

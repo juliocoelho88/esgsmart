@@ -8,11 +8,11 @@ import java.util.List;
 
 public interface ReciclagemRepository extends JpaRepository<Reciclagem, Integer> {
 
-    List<Reciclagem> findByTipoDeMaterial(String tipoMaterial);
+    List<Reciclagem> findByTipoMaterial(String tipoMaterial);
 
     List<Reciclagem> findByQuantidadeReciclada(double quantidade);
 
     List<Reciclagem> findByDataReciclagem(LocalDate data);
 
-    void deleteById(Integer integer);
+
 }

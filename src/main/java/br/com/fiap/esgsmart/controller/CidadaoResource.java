@@ -32,7 +32,7 @@ public class CidadaoResource {
         cidadao.setId(id);
         return cidadaoRepository.save(cidadao);
     }
-    @DeleteMapping("{codigo]")
+    @DeleteMapping("{codigo}")
     public void remover(@PathVariable int codigo){
         cidadaoRepository.deleteById(codigo);
     }

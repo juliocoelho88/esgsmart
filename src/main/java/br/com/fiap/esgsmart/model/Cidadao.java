@@ -1,6 +1,7 @@
 package br.com.fiap.esgsmart.model;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
+
 import java.util.List;
 
 @Entity
@@ -15,19 +16,24 @@ public class Cidadao {
     private String dataNascimento;
     private String endereco;
 
+    private boolean novo;
+
     @OneToMany(mappedBy = "cidadao")
     private List<DispositivoIoT> dispositivosIoT;
 
     public Cidadao() {
     }
 
-    public Cidadao(Long id, String nome, String email, String senha, String dataNascimento, String endereco) {
+
+    public Cidadao(Long id, String nome, String email, String senha, String dataNascimento, String endereco, boolean novo, List<DispositivoIoT> dispositivosIoT) {
         this.id = id;
         this.nome = nome;
         this.email = email;
         this.senha = senha;
         this.dataNascimento = dataNascimento;
         this.endereco = endereco;
+        this.novo = novo;
+        this.dispositivosIoT = dispositivosIoT;
     }
 
     public Long getId() {
@@ -92,5 +98,13 @@ public class Cidadao {
         this.dispositivosIoT = dispositivosIoT;
         return this;
     }
+    public boolean isNovo() {
+        return novo;
+    }
+
+    public void setNovo(boolean novo) {
+        this.novo = novo;
+    }
+
 }
 

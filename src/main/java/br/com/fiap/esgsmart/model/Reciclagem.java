@@ -1,6 +1,7 @@
 package br.com.fiap.esgsmart.model;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
+
 import java.time.LocalDate;
 
 @Entity
