@@ -32,10 +32,12 @@ public class CidadaoResource {
         cidadao.setId(id);
         return cidadaoRepository.save(cidadao);
     }
-
+    @DeleteMapping("{codigo]")
     public void remover(@PathVariable int codigo){
         cidadaoRepository.deleteById(codigo);
     }
 
-
+    public List<Cidadao> buscar(@RequestParam(required = false) String nome, @RequestParam(defaultValue = "false") boolean novo){
+        return nome != null ? cidadaoRepository.findByNomeAndNovo(nome, novo) : cidadaoRepository.findByNovo(novo);
+    }
 }
