@@ -13,6 +13,7 @@ public class Reciclagem {
     private String tipoMaterial;
     private double quantidadeReciclada;
     private LocalDate dataReciclagem;
+    private boolean novo;
 
     @ManyToOne
     @JoinColumn(name = "cidadao_id")
@@ -21,11 +22,20 @@ public class Reciclagem {
     public Reciclagem() {
     }
 
-    public Reciclagem(Long id, String tipoMaterial, double quantidadeReciclada, LocalDate dataReciclagem) {
+    public Reciclagem(Long id, String tipoMaterial, double quantidadeReciclada, LocalDate dataReciclagem, boolean novo) {
         this.id = id;
         this.tipoMaterial = tipoMaterial;
         this.quantidadeReciclada = quantidadeReciclada;
         this.dataReciclagem = dataReciclagem;
+        this.novo = novo;
+    }
+
+    public boolean isNovo() {
+        return novo;
+    }
+    public Reciclagem setNovo(boolean novo) {
+        this.novo = novo;
+        return this;
     }
 
     public Long getId() {

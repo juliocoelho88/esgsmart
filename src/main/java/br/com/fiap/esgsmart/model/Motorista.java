@@ -19,9 +19,19 @@ public class Motorista {
     public Motorista() {
     }
 
-    public Motorista(Long id, String nome) {
+    public Motorista(Long id, String nome, boolean novo) {
         this.id = id;
         this.nome = nome;
+        this.novo = novo;
+    }
+
+    public boolean isNovo() {
+        return novo;
+    }
+
+    public Motorista setNovo(boolean novo) {
+        this.novo = novo;
+        return this;
     }
 
     public Long getId() {
