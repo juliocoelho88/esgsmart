@@ -1,5 +1,6 @@
 package br.com.fiap.esgsmart.repository;
 
+import br.com.fiap.esgsmart.model.Cidadao;
 import br.com.fiap.esgsmart.model.Motorista;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -8,16 +9,12 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 @Repository
-public interface MotoristaRepository extends JpaRepository<Motorista, Integer> {
+public interface MotoristaRepository extends JpaRepository<Motorista, Long> {
 
-    @Override
-    void deleteById(Integer integer);
 
-    @Override
-    List<Motorista> findAllById(Iterable<Integer> integers);
+    List<Motorista> findByNovo(boolean novo);
 
-    @Override
-    Page<Motorista> findAll(Pageable pageable);
+    List<Motorista> findByNomeAndNovo(String cidadao, boolean novo);
 
     List<Motorista> findByNome(String nome);
 

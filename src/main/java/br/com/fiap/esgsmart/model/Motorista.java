@@ -10,9 +10,9 @@ public class Motorista {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "motorista")
     private Long id;
-
     private String nome;
 
+    private boolean novo;
     @OneToMany(mappedBy = "motorista")
     private List<ColetaDeLixo> coletas;
 

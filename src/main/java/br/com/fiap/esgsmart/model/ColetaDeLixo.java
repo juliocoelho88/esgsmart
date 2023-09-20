@@ -11,7 +11,6 @@ public class ColetaDeLixo {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "coletaDeLixo")
     private Long id;
-
     private LocalDate dataColeta;
     private String localizacao;
     private String status;
