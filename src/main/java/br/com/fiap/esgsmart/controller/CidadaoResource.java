@@ -19,7 +19,7 @@ public class CidadaoResource {
         return cidadaoRepository.findAll();
     }
     @GetMapping("{codigo}")
-    public Cidadao buscar(@PathVariable int codigo){
+    public Cidadao buscar(@PathVariable long codigo){
         return cidadaoRepository.findById(codigo).get();
     }
     @ResponseStatus(HttpStatus.CREATED)
@@ -33,7 +33,7 @@ public class CidadaoResource {
         return cidadaoRepository.save(cidadao);
     }
     @DeleteMapping("{codigo}")
-    public void remover(@PathVariable int codigo){
+    public void remover(@PathVariable long codigo){
         cidadaoRepository.deleteById(codigo);
     }
 

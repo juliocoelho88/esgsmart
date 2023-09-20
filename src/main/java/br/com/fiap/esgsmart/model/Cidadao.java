@@ -15,7 +15,6 @@ public class Cidadao {
     private String senha;
     private String dataNascimento;
     private String endereco;
-
     private boolean novo;
 
     @OneToMany(mappedBy = "cidadao")
