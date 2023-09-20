@@ -22,7 +22,7 @@ import br.com.fiap.esgsmart.repository.ColetaDeLixoRepository;
 @RequestMapping("/coleta")
 public class ColetaDeLixoResource {
     
-     @Autowired
+    @Autowired
     private ColetaDeLixoRepository coletaDeLixoRepository;
 
     @GetMapping

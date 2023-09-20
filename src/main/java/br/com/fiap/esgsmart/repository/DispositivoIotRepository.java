@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 @Repository
-public interface DispositivoIotRepository extends JpaRepository<DispositivoIoT, Integer> {
+public interface DispositivoIotRepository extends JpaRepository<DispositivoIoT, Long> {
 
 
     List<DispositivoIoT> findByLocalizacao(String localizacao);
