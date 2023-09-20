@@ -6,8 +6,10 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 @Repository
-public interface ColetaDeLixoRepository extends JpaRepository<ColetaDeLixo, Integer> {
+public interface ColetaDeLixoRepository extends JpaRepository<ColetaDeLixo, Long> {
     List<ColetaDeLixo> findByLocalizacao(String localizacao);
+
+    List<ColetaDeLixo> findByStatus(String status);
 
 
 
