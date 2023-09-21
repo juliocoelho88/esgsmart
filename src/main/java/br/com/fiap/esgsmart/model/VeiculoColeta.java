@@ -10,7 +10,6 @@ public class VeiculoColeta {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "veiculoColeta")
     private Long id;
-
     private String modelo;
     private String placa;
 

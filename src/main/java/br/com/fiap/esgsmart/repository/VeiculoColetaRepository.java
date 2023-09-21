@@ -8,14 +8,16 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 @Repository
-public interface VeiculoColetaRepository extends JpaRepository<VeiculoColeta, Integer> {
+public interface VeiculoColetaRepository extends JpaRepository<VeiculoColeta, Long> {
 
     @Override
-    List<VeiculoColeta> findAllById(Iterable<Integer> integers);
+    List<VeiculoColeta> findAllById(Iterable<Long> longs);
 
     @Override
-    void deleteById(Integer integer);
+    void deleteById(Long integer);
 
     @Override
     Page<VeiculoColeta> findAll(Pageable pageable);
+
+
 }
